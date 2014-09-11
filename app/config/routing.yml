@@ -1,0 +1,28 @@
+admin_homepage:
+    pattern:  /
+    defaults: { _controller: AdminConsoleBundle:Layout:index }
+
+admin_console:
+    resource: "@AdminConsoleBundle/Resources/config/routing.yml"
+    prefix:   /
+
+admin_user:
+    resource: "@AdminUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+admin_domain:
+    resource: "@AdminDomainBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+
+
+
+
+
+
+
+
+
+
+
