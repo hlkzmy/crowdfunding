@@ -1,0 +1,11 @@
+web_common_mail_tencent:
+    path:     /mail/tencent
+    defaults: { _controller: WebCommonBundle:Default:tencent }
+    
+web_common_mail_exmail:
+    path:     /mail/exmail
+    defaults: { _controller: WebCommonBundle:Default:exmail }
+    
+web_common_mail_163:
+    path:     /mail/163
+    defaults: { _controller: WebCommonBundle:Default:wangyi	 }
