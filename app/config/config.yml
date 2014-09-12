@@ -48,32 +48,20 @@ doctrine:
         default_connection: default
         connections:
             default:
-                driver:   "%smartdns_idc_database_driver%"
-                host:     "%smartdns_idc_database_host%"
-                port:     "%smartdns_idc_database_port%"
-                dbname:   "%smartdns_idc_database_name%"
-                user:     "%smartdns_idc_database_user%"
-                password: "%smartdns_idc_database_password%"
+                driver:   "%default_database_driver%"
+                host:     "%default_database_host%"
+                port:     "%default_database_port%"
+                dbname:   "%default_database_name%"
+                user:     "%default_database_user%"
+                password: "%default_database_password%"
                 charset:  UTF8
                 
-            smartdns_test:
-                driver:   "%smartdns_test_database_driver%"
-                host:     "%smartdns_test_database_host%"
-                port:     "%smartdns_test_database_port%"
-                dbname:   "%smartdns_test_database_name%"
-                user:     "%smartdns_test_database_user%"
-                password: "%smartdns_test_database_password%"
-                charset:  UTF8
-    
     orm:
         default_entity_manager: default
         entity_managers:
             default:
                 connection: default
                 mappings: 
-                    AdminConsoleBundle: ~
-                    AdminDomainBundle: ~
-                    AdminUserBundle: ~
                     
 # Swiftmailer Configuration
 swiftmailer:

@@ -1,0 +1,7 @@
+parameters:
+#    web_common.example.class: Web\CommonBundle\Example
+
+services:
+    Web.CommonBundle.Mail.Tencent:
+        class: Web\CommonBundle\Services\Mail\TencentSmtp
+        arguments: [%mailer_host%,%mailer_port%,%mailer_user%,%mailer_password%]
