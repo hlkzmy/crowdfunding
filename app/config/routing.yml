@@ -1,3 +1,7 @@
+homepage:
+    pattern:  /
+    defaults: { _controller: WebPageBundle:Index:index }
+
 web_page:
     resource: "@WebPageBundle/Resources/config/routing.yml"
     prefix:   /
@@ -9,10 +13,6 @@ web_project:
 web_user:
     resource: "@WebUserBundle/Resources/config/routing.yml"
     prefix:   /
-
-homepage:
-    pattern:  /
-    defaults: { _controller: WebCommonBundle:Default:index }
 
 web_common:
     resource: "@WebCommonBundle/Resources/config/routing.yml"
