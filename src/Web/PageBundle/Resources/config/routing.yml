@@ -1,0 +1,3 @@
+web_page_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: WebPageBundle:Default:index }
