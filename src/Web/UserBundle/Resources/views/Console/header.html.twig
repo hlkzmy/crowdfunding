@@ -1,0 +1,28 @@
+<div class="page-header navbar navbar-fixed-top">
+	<!-- BEGIN HEADER INNER -->
+	<div class="page-header-inner">
+		<!-- BEGIN LOGO -->
+		<div class="page-logo">
+			<a href="index.html"> 
+			<img src="{{ asset('assets/admin/layout/img/logo.png')}}" alt="logo" class="logo-default">
+			</a>
+			<div class="menu-toggler sidebar-toggler"></div>
+		</div>
+		<!-- END LOGO -->
+		<!-- BEGIN HORIZANTAL MENU -->
+		<!-- DOC: Remove "hor-menu-light" class to have a horizontal menu with theme background instead of white background -->
+		<!-- DOC: This is desktop version of the horizontal menu. The mobile version is defined(duplicated) in the responsive menu below along with sidebar menu. So the horizontal menu has 2 seperate versions -->
+		<div class="hor-menu hor-menu-light hidden-sm hidden-xs">
+			<ul class="nav navbar-nav">
+				<li><a href="/">首页</a></li>
+				<li><a href="{{ path('web_project_list_page')}}">浏览项目</a></li>
+				<li><a href="{{ path('web_project_startup_page')}}">发起项目</a></li>
+				<li><a href="{{ path('web_page_about_us')}}">关于我们</a></li>
+				<li><a href="{{ path('web_user_console')}}">用户中心</a></li>
+			</ul>
+		</div>
+		<!-- END HORIZANTAL MENU -->
+		
+	</div>
+	<!-- END HEADER INNER -->
+</div>

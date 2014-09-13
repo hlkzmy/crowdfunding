@@ -37,3 +37,10 @@ web_user_personal_investor_register_page:
 web_user_company_investor_register_page:
     path:     /user/company-investor/register
     defaults: { _controller: WebUserBundle:CompanyInvestor:register }
+    
+    
+#用户中心的布局控制页面
+web_user_console:
+    path:     /user/console
+    defaults: { _controller: WebUserBundle:Console:layout }
+    
