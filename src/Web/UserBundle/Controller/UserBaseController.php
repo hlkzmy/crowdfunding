@@ -12,7 +12,6 @@ abstract class UserBaseController extends Controller
     }
     
     
-    
     public function loginAction(){
     	
     }

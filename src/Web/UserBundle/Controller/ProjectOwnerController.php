@@ -3,6 +3,7 @@
 namespace Web\UserBundle\Controller;
 
 use Web\UserBundle\Controller\UserBaseController;
+use Symfony\Component\HttpFoundation\Response;
 
 class ProjectOwnerController extends UserBaseController
 {
@@ -17,7 +18,7 @@ class ProjectOwnerController extends UserBaseController
     public function registerAction(){
     	
     	
-    	
+    	return new Response();
     }//function registerAction() end
     
     

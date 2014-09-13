@@ -3,6 +3,8 @@
 namespace Web\UserBundle\Controller;
 
 use Web\UserBundle\Controller\UserBaseController;
+use Symfony\Component\HttpFoundation\Response;
+
 
 class CompanyInvestorController extends UserBaseController
 {
@@ -19,7 +21,7 @@ class CompanyInvestorController extends UserBaseController
     	 
     	 
     	 
-    	
+    	return new Response();
     }//function registerAction() end
     
     
