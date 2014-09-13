@@ -5,3 +5,7 @@ services:
     Web.CommonBundle.Mail.Tencent:
         class: Web\CommonBundle\Services\Mail\TencentSmtp
         arguments: [%mailer_host%,%mailer_port%,%mailer_user%,%mailer_password%]
+        
+    Web.CommonBundle.Sms.Pcf:
+        class: Web\CommonBundle\Services\Sms\Pcf
+        arguments: [%sms_pcf_host%,%sms_pcf_account%,%sms_pcf_password%]

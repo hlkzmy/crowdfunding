@@ -9,3 +9,7 @@ web_common_mail_exmail:
 web_common_mail_163:
     path:     /mail/163
     defaults: { _controller: WebCommonBundle:Default:wangyi	 }
+    
+web_common_sms_pcf:
+    path:     /sms/pcf
+    defaults: { _controller: WebCommonBundle:Default:pcf	 }

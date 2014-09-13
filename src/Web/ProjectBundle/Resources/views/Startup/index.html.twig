@@ -1,0 +1,393 @@
+{% extends 'WebPageBundle:Layout:layout.html.twig' %}
+
+{% block body %}
+<script type="text/javascript" src="http://istatic.yuanshihui.com/angelpc/js/new/kindeditor4/kindeditor-all.js?v=20140508"></script>
+<link rel="stylesheet" type="text/css" href="http://istatic.yuanshihui.com/angelpc/v2/static/css/create_project.css?v=20140508">
+<link rel="stylesheet" type="text/css" href="http://istatic.yuanshihui.com/angelpc/v2/static/css/select.css?v=20140508">
+<script type="text/javascript" src="http://istatic.yuanshihui.com/angelpc/js/new/kindeditor4/kindeditor-all.js?v=20140508"></script>
+<script type="text/javascript" src="http://istatic.yuanshihui.com/angelpc/js/new/kindeditor4/lang/zh_CN.js?v=20140508"></script>
+<script type="text/javascript" src="http://istatic.yuanshihui.com/angelpc/v2/static/js/select.js?v=20140508"></script>
+<!--mian-content statr-->
+<div class="wrap clearfix">
+  <h3 class="h3-stl">发起项目</h3>
+  <ul class="clearfix list-ul ">
+    <li class="select"><a href="javascript:void(0);"><i class="project"></i>项目简介</a></li>
+    <li><a href="javascript:void(0);"><i class="team"></i>团队信息</a></li>
+    <li><a href="javascript:void(0);"><i class="video"></i>视频 / 截图</a></li>
+    <li class="br"><a href="javascript:void(0);"><i class="finance"></i>融资信息</a></li>
+  </ul>
+</div>
+<div class="box_bg">
+<div class="wrap clearfix">
+  <div class="main-box">
+    <form name="dealform" wx-validator-noscroll wx-validator wx-validator-ajax action="/startup/savedeal" method="post">
+      <div class="clearfix">
+        <h4 class="h4-stl">项目简介</h4>
+        <div class="from-box">
+			<div class="row clearfix">
+			<label class="upload_label">上传封面：</label>
+			<img id="uploadImg" src="">
+			<input type="file"  class="input-pic" name="file" wx-upload="/upload/cover" wx-upload-param="type=thumb&size=120x120" wx-upload-assign="upload=data.fileUrl" wx-upload-set="uploadImg=data.fileUrl" hidefocus="true">
+            <div class="select_img">+</div>
+            <div class="info_img"> <span class="img_infor">270*200像素图片，支持jpg、png、jpeg格式的图片，文件小于2M</span> <span id="wx-validator-upload-required" class="error-text hidden">  不能为空</span></div>
+          </div>
+            <div class="m-progress hidden" style="margin-left: 150px;width:60px" >
+              <div id="fileProgress" style="width:0%;"></div>
+            </div>
+                        <input  type="text" wx-validator-rule="required"  name="upload" class="hidden" value="">
+                      <div class="row clearfix">
+            <label>产品／项目名称：</label>
+            <input type="text" maxlength="20" id="" wx-validator-rule="required" class="j_txt" name="name" value="" placeholder="">
+          </div>          
+          <div class="row clearfix">
+            <label>项目亮点：</label>
+            <input type="text" id="" maxlength="100"  wx-validator-rule="required" class="j_txt" name="desc" value="" placeholder="">
+            <div class="info_hint info_s"> <span class="j_infor">用一句话描述项目亮点，如：<br/>&nbsp;
+            知乎 － 真实的网络问答社区，帮您寻找答案，分享知识。</span><span id="wx-validator-desc-required" class="hidden error-text">不能为空</span> </div>
+          </div>
+          <div class="row clearfix">
+            <label>网址／产品下载链接：</label>
+            <input type="text" id=""  wx-validator-rule="url" class="j_txt" name="link" value="" placeholder="">
+          </div>
+          <div class="row clearfix">
+            <label>项目介绍： </label>
+            <textarea name="productIntro" rows="8" class="fl"></textarea>
+          </div>
+          <div class="row clearfix" style="position:releative;z-index:3">
+            <label>产品所处阶段：</label>
+            <select name="selectStage" custom-select data-class="select-sty1" data-placeholder="请选择">              
+                            <option value="1" >概念阶段</option>
+                            <option value="2" >研发中</option>
+                            <option value="3" >产品已经发布</option>
+                            <option value="4" >已经有收入</option>
+                            <option value="5" >已经盈利</option>
+                          </select>
+          </div>
+          <div class="row clearfix" style="position:releative;z-index:2">
+            <label>团队人数：</label>
+            <select name="selectTeam" custom-select data-class="select-sty2" data-placeholder="请选择">               
+                                <option value="1" >少于5人</option>
+                                <option value="2" >5-15人</option>
+                                <option value="3" >15-50人</option>
+                                <option value="4" >50-150人</option>
+                                <option value="5" >150-500人</option>
+                                <option value="6" >500-2000人</option>
+                                <option value="7" >2000人以上</option>
+                            </select>
+          </div>
+          <div class="row clearfix Js-ai" style="position:releative;z-index:1">
+            <label>所在城市：</label>
+            <select name="province" class="hidden" data-class="select-sty3" data-placeholder="请选择" id="provinceId">
+            </select>
+            <select name="city" class="hidden" data-class="select-sty4" data-placeholder="请选择" id="cityId">
+            </select>
+          </div>
+          <div class="row clearfix">
+            <label>所处行业：</label>
+			<input type="text" class="hidden" value="" name="categories">
+            <a href="javascript:void(0)" class="select_btn">点击选择</a>            
+          </div>
+          <div class="row clearfix">
+            <label></label>
+            <div class="selected_span">
+                        </div>
+          </div>
+        </div>
+      </div >
+      
+      
+      
+      <div class="clearfix  mt">
+        <h4 class="h4-stl">联系信息</h4>
+        <div class="from-box">
+          <div class="row clearfix">
+            <label>项目地址：</label>
+            <input wx-validator-rule="required"  type="text" id="" class="j_txt" name="addr" value="" placeholder="">
+          </div>
+          <div class="row clearfix">
+            <label>微信：</label>
+            <input wx-validator-rule="required"  type="text" id="" class="j_txt" name="weixin" value="" placeholder="">
+          </div>
+          <div class="row clearfix">
+            <label>qq：</label>
+            <input wx-validator-rule="required"  type="text" id="" class="j_txt" name="qq" value="" placeholder="">
+          </div>
+        </div>
+      </div >      
+  <div class="clearfix mt">
+        <div class="deal">
+                  <p class="p-read">
+            <input name="xieyi" type="checkbox" wx-validator-xieyi-nocheck="true">
+            <span>阅读并同意原始会的<a href="/terms/finance" class="red">《服务协议》</a></span></p>
+			<span class="hidden error-text" id="wx-validator-xieyi-nocheck">请先阅读协议</span>
+          <p> 
+            <input  type="submit"  class="btn-reg change-mt20" value="下一步" />
+		  </p>
+          
+        </div>
+      </div >
+      </form>
+  </div>
+             <input type="hidden" id="_provinceId" value=""/>
+       <input type="hidden" id="_cityId" value=""/>
+</div>
+</div>
+<!--mian-content  end-->
+
+<script type="text/javascript">
+function dealform(data){
+	if(data.errno == 0){
+		location.href="/startup/team/dealId/"+data.data+"/financeId/"+data.finance_id;
+	}else{
+		wx.alert(data.usercode)
+	}
+}
+	var kindeditorOption = {
+			basePath:"http://istatic.yuanshihui.com/angelpc/js/new/kindeditor4/",
+			resizeType : 1,
+			allowPreviewEmoticons : false,
+
+			allowMediaUpload:false,
+			allowFileUpload:false,
+			allowFlashUpload:false,
+
+			allowFileManager:false,
+			allowImageRemote:false,
+			filePostName:"file",
+			minWidth : "567",
+			minHeight: "200",
+			uploadJson :"/upload/cover",
+			items : ['formatblock', '|', 'image', 'link', 'removeformat']
+	}
+	var editor = KindEditor.create("textarea[name='productIntro']",kindeditorOption);
+
+	function dealform_before(){
+		console.log($('.select-sty1').text())
+				if(editor.text().length == 0){
+					wx.alert('请填写产品介绍');
+					return false;
+				} else if($('input[name="upload"]').val() == 0){
+					wx.alert('请上传封面图片');
+					return false;
+				} else if($('.select-sty1').text() == '请选择'){
+					wx.alert('请选择阶段');
+					return false;
+				} else if($('.select-sty2').text() == '请选择'){
+					wx.alert('请选择人数');
+					return false;
+				} else if($('.select-sty3').text() == '请选择'){
+					wx.alert('请选择省份');
+					return false;
+				} else if($('.select-sty4').text() == '请选择'){
+					wx.alert('请选择城市');
+					return false;
+				} else if($('.selected_span').children().length == 0){
+					wx.alert('请选择行业');
+					return false;
+				}
+				$("#productIntro").val(editor.html());
+				return true;
+	}
+	function file(data){
+		if(data.errno == 0){
+			$('[name="upload"]').attr('value',data.data.fileUrl);
+			$('.m-progress').hide();
+		}else{
+			$('.m-progress').hide();
+			wx.alert(data.usercode)
+		}
+	}
+var $upload = $("#fileProgress");
+function file_progress(p){  
+  $upload.parent().show();
+  $upload.width(p+'%');
+}
+	//area select By Deve
+	wx.sendData("/region/index",function(data){
+		var plist="";
+		for(var i=0;i<data.length;i++){
+			plist+="<option value='"+data[i].zone_id+"' data-id='"+data[i].zone_id+"'>"+data[i].name+"</option>";
+		}
+		$('#provinceId').html(plist);
+		selspan('#provinceId');
+		$('.select-select-sty3-wrapper .opts').on('click',function(){
+			wx.sendData("/region/index/parentId/"+$(this).data("id"),function(data){
+				var plist2="";
+				for(var i=0;i<data.length;i++){
+					plist2+="<option  value='"+data[i].zone_id+"' data-id='"+data[i].zone_id+"'>"+data[i].name+"</option>";
+				}
+				$('#cityId').html(plist2);
+				$('.select-sty4').closest('.select-span').remove();
+				selspan('#cityId');
+			})
+		})
+		//yuxuan
+		var _sheng = $('#_provinceId').val();
+		if(_sheng !== ""){
+			$('[name="categories"]').attr('value',function(){
+				var ede = $('.selected_span span'),ded=[];
+				for(var i=0;i<ede.length;i++){
+					ded[i]=ede.eq(i).data('info');
+				}
+				return ded.join(',')
+			})
+			var sheng = $('option[data-id="'+_sheng+'"]').text();
+			$('option[data-id="'+_sheng+'"]').prop('selected',true).attr('selected',true);
+			$('.select-sty3').text(sheng);
+			//area select By Deve
+			wx.sendData("/region/index/parentId/"+_sheng,function(data){
+				var plist2="";
+				for(var i=0;i<data.length;i++){
+					plist2+="<option  value='"+data[i].zone_id+"' data-id='"+data[i].zone_id+"'>"+data[i].name+"</option>";
+				}
+				$('#cityId').html(plist2);
+				$('.select-sty4').closest('.select-span').remove();
+				selspan('#cityId');
+				var _shi = $('#_cityId').val();
+				var shi = $('option[data-id="'+_shi+'"]').text();
+				$('option[data-id="'+_shi+'"]').prop('selected',true).attr('selected',true);
+				$('.select-sty4').text(shi);
+			})
+		}
+	})
+	//trade select By Deve
+	$('.select_btn').click(function(){
+		wx.sendData("/category/index",function(data){
+			var hylist="",hylist2="",hylist3="";
+			//first sort
+			for(var i=0;i<data.length;i++){
+				hylist += "<span data-id='"+data[i].id+"'>"+data[i].name+"</span>";
+			}
+			wx.sendData("/category/index/parentId/1",function(data){
+				//second sort
+				for(var i=0;i<data.length;i++){
+					hylist2 += "<span class='ipt'><input type='checkbox' data-parent='"+data[1].id+"' data-id='"+data[i].id+"' value='"+data[i].name+"'/>"+data[i].name+"</span>";
+				}
+				//sort list
+				var allbox = "<div class='trade-select-box'> <div class='title'>选择行业<span class='close'>×</span></div> <div class='wrapper'> <div class='area'>最多选择3个行业</div> <div class='left'> <div class='sub-title'>一级分类</div><div class='left-sub'>"+hylist+"</div></div> <div class='right'> <div class='sub-title'>二级分类</div><div class='right-sub'>"+hylist2+"</div></div> <div class='btn'><a class='done' href='javascript:;'>选择完毕</a><a class='dark' href='javascript:;'>取消</a><div> </div> </div>";
+			wx.pop(allbox);
+			$('.selected_span span').clone().prependTo('.area');
+			var secon = $('.area span');
+			for(var i=0;i<secon.length;i++){
+				$('[data-id="'+secon.eq(i).data('id')+'"]').prop('checked',true);
+				$('[data-id="'+secon.eq(i).data('id')+'"]').attr('checked',true);
+				$('[data-id="'+secon.eq(i).data('id')+'"]').closest('span').addClass('c');
+			}
+				//second default
+			$('.right-sub span input').on('change',function(){
+				var iSel = $('.area span').length;
+				if($(this).prop('checked')){
+					if(iSel<3){
+						$(this).closest('span').addClass('c');
+						$('.area').prepend('<span data-id="'+$(this).data('id')+'" data-info="'+$(this).data('parent')+'-'+$(this).data('id')+'">'+$(this).val()+'<a class="shan" href="javascript:;"></a></span>')
+					}else{
+						$(this).prop('checked',false)
+						$(this).attr('checked',false)
+						alert('最多选择三项');
+					}
+				}else{
+					$(this).closest('span').removeClass('c');
+					$('.area span[data-id='+$(this).data('id')+']').remove();
+				}
+				//
+				$('.shan').on('click',function(){
+					$('.right-sub span').find('[data-id="'+$(this).closest('span').data('id')+'"]').prop('checked',false);
+					$('.right-sub span').find('[data-id="'+$(this).closest('span').data('id')+'"]').attr('checked',false);
+					$(this).closest('span').remove();
+				})
+			})
+				//colse
+			$('.close').on('click',function(){
+				$('div[class*="Js-pop"]').remove();
+			})
+				//cancel
+			$('.dark').on('click',function(e){
+				$('div[class*="Js-pop"]').remove();
+			})
+				//done
+				$('.done').on('click',function(){
+					$('.selected_span').empty();
+					$('.area span').clone().appendTo('.selected_span');
+					$('div[class*="Js-pop"]').remove();
+					$('[name="categories"]').attr('value',function(){
+						var ede = $('.selected_span span'),ded=[];
+						for(var i=0;i<ede.length;i++){
+							ded[i]=ede.eq(i).data('info');
+						}
+						return ded.join(',')
+					})
+					$('.shan').on('click',function(){
+						$(this).closest('span').remove();
+						$('[name="categories"]').attr('value',function(){
+							var ede = $('.selected_span span'),ded=[];
+							for(var i=0;i<ede.length;i++){
+								ded[i]=ede.eq(i).data('info');
+							}
+							return ded.join(',')
+						})
+					})
+				})
+				$('.shan').on('click',function(){
+					$('.right-sub span').find('[data-id="'+$(this).closest('span').data('id')+'"]').prop('checked',false);
+					$('.right-sub span').find('[data-id="'+$(this).closest('span').data('id')+'"]').attr('checked',false);
+					$(this).closest('span').remove();
+				})
+				//first => span second
+			$('.left-sub span').on('click',function(){
+				$(this).siblings().removeClass('c');
+				$(this).addClass('c');
+				var sId = $(this).data('id'),sName=$(this).data('id'),hylist3='';
+				wx.sendData("/category/index/parentId/"+sId,function(data){
+					//second sort
+					for(var i=0;i<data.length;i++){
+						hylist3 += "<span class='ipt'><input type='checkbox' data-parent='"+sName+"' data-id='"+data[i].id+"' value='"+data[i].name+"'/>"+data[i].name+"</span>";
+					}
+					$('.right-sub').html(hylist3);
+					//is selected
+					var secon = $('.area span');
+					for(var i=0;i<secon.length;i++){
+						$('[data-id="'+secon.eq(i).data('id')+'"]').prop('checked',true);
+						$('[data-id="'+secon.eq(i).data('id')+'"]').attr('checked',true);
+					}
+					//selected
+					$('.right-sub span input').on('change',function(){
+						$(this).closest('span').addClass('c');
+						var iSel = $('.area span').length;
+						if($(this).prop('checked')){
+							if(iSel<3){
+								$('.area').prepend('<span data-id="'+$(this).data('id')+'"  data-info="'+$(this).data('parent')+'-'+$(this).data('id')+'">'+$(this).val()+'<a class="shan" href="javascript:;"></a></span>')
+							}else{
+								$(this).prop('checked',false)
+								$(this).attr('checked',false)
+								alert('最多选择三项');
+							}
+						}else{
+							$(this).closest('span').removeClass('c');
+							$('.area span[data-id='+$(this).data('id')+']').remove();
+						}
+						//
+						$('.shan').on('click',function(){
+							$('.right-sub span').find('[data-id="'+$(this).closest('span').data('id')+'"]').prop('checked',false);
+							$('.right-sub span').find('[data-id="'+$(this).closest('span').data('id')+'"]').attr('checked',false);
+							$(this).closest('span').remove();
+						})
+					})
+				})
+			})
+			})
+		})
+	})
+	$('.shan').on('click',function(){
+		$(this).closest('span').remove();
+		$('[name="categories"]').attr('value',function(){
+			var ede = $('.selected_span span'),ded=[];
+			for(var i=0;i<ede.length;i++){
+				ded[i]=ede.eq(i).data('info');
+			}
+			return ded.join(',')
+		})
+	})
+	//
+</script>
+<!--mian-content  end-->
+{% endblock %}

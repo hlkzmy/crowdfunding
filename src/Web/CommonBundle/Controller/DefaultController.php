@@ -30,7 +30,25 @@ class DefaultController extends Controller
 	}
 	
 	
-	
+	public function pcfAction(){
+		
+		try{
+				
+			$smsService = $this->get('Web.CommonBundle.Sms.Pcf');
+			$smsService ->setCellphone('18621276656')
+						->setCapcha('604302');
+				
+			$smsService->send();
+		}
+		catch(\Exception $e){
+				
+			die($e->getMessage());
+				
+		}
+		
+		return new Response();
+		
+	}//function pcfAction() end
 	
     
    

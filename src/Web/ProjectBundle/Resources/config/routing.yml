@@ -1,9 +1,14 @@
 #项目模块的项目列表页面
-web_project_item_list_page:
-    path:     /project/item/list
-    defaults: { _controller: WebProjectBundle:Item:list }
+web_project_list_page:
+    path:     /project/list
+    defaults: { _controller: WebProjectBundle:List:index }
 
 #项目模块的项目详情页面
-web_project_item_details_page:
-    path:     /project/item/details
-    defaults: { _controller: WebProjectBundle:Item:details }
+web_project_details_page:
+    path:     /project/details
+    defaults: { _controller: WebProjectBundle:Details:index }
+    
+#项目模块的创建
+web_project_startup_page:
+    path:     /project/startup
+    defaults: { _controller: WebProjectBundle:Startup:index }
