@@ -1,1 +1,480 @@
-project item list
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="google-site-verification" content="ut7BeTtfYcLMGQV17SBt-6isJj4QwdlXQLemK290nAs" /> 
+<meta name="360-site-verification" content="e14ad415b8f36bb6cbfed7027688c5b3" />
+<title>原始会</title>
+<link rel="stylesheet" type="text/css" href="http://istatic.yuanshihui.com/angelpc/v2/static/css/base.css?v=20140508">
+<link rel="stylesheet" type="text/css" href="http://istatic.yuanshihui.com/angelpc/v2/static/css/common.css?v=20140508">
+<script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/jquery-1.10.2.min.js?v=20140508'></script>
+<script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/wx.js?v=20140508' wx-main></script>
+<script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/wx.config.js?v=20140508'></script>
+<script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/common.js?v=20140508'></script>
+</head>
+<body>
+<!--header static-->
+<div class="header">
+	<a href="/" class="logo"><img src="http://istatic.yuanshihui.com/angelpc/v2/static/images/index/logo.png?v=20140508" title="北京原始会投资管理有限公司" alt="原始会" /></a>
+	<div class="menuBar">
+		<ul class="clearfix">
+			<li><a href="/">首页</a></li>
+			<li><a href="/deal/list">浏览项目</a></li>
+			<li><a href="/startup/deal">发起项目</a></li>
+			<li><a href="/about/about">关于我们</a></li>
+		</ul>
+	</div>
+<form id="se" name="se" action="/deal/list" method="post" wx-validator wx-validator-ajax >
+	<span class="search"><a type="submit" href="###"><img src="http://istatic.yuanshihui.com/angelpc/v2/static/images/index/icons.png?v=20140508" /></a>
+	<input wx-validator-notip name="q" type="text" value=""  placeholder="输入关键词" />
+	</span>
+</form>
+			<div class="userbox">
+		<a href="/user/login" class="logon">登录</a>
+		<a href="/user/register" class="reg">注册</a>
+	</div>
+	</div>
+<link rel="stylesheet" type="text/css" href="http://istatic.yuanshihui.com/angelpc/v2/static/css/list.css?v=20140508">
+
+<!--header end-->
+<div>
+<div class="filter-box-warp">
+		<div class="filter-box">
+			<span>筛选</span>
+			<span class="sort-box JS-a">
+			    				<a class="JS-a" href="#">行业分类</a><span></span>
+								<div>
+				<ul class="JS-m">
+					<li><a href="/deal/list/">全部</a></li>
+				 					<li ><a href="/deal/list/cId/1" class="select">电子商务</a></li>
+				  					<li ><a href="/deal/list/cId/2" class="select">移动互联网</a></li>
+				  					<li ><a href="/deal/list/cId/4" class="select">社交网络</a></li>
+				  					<li ><a href="/deal/list/cId/7" class="select">游戏动漫</a></li>
+				  					<li ><a href="/deal/list/cId/8" class="select">教育培训</a></li>
+				  					<li ><a href="/deal/list/cId/10" class="select">医疗健康</a></li>
+				  					<li ><a href="/deal/list/cId/11" class="select">能源环保</a></li>
+				  					<li ><a href="/deal/list/cId/12" class="select">文化艺术</a></li>
+				  					<li ><a href="/deal/list/cId/75" class="select">智能硬件</a></li>
+				  				</ul>
+				</div>
+			</span>
+			<span class="sort-box JS-a">
+			  			   <a  class="JS-a" href="#">所在地区</a><span></span>
+			  				<div>
+				<ul class="JS-m">
+				<li><a href="/deal/list/">全部</a></li>
+												<li><a href="/deal/list/zId/110000"  class="select" >北京市</a></li>
+			    				<li><a href="/deal/list/zId/310000"  class="select" >上海市</a></li>
+			    				<li><a href="/deal/list/zId/330100"  class="select" >杭州市</a></li>
+			    				<li><a href="/deal/list/zId/500000"  class="select" >重庆市</a></li>
+			    				<li><a href="/deal/list/zId/510100"  class="select" >成都市</a></li>
+			    				<li><a href="/deal/list/zId/440300"  class="select" >深圳市</a></li>
+			    				<li><a href="/deal/list/zId/420100"  class="select" >武汉市</a></li>
+			    				<li><a href="/deal/list/zId/320100"  class="select" >南京市</a></li>
+			    				<li><a href="/deal/list/zId/120000"  class="select" >天津市</a></li>
+			                    				</ul>
+				</div>
+			</span>
+			<span class="sort-box JS-a">
+			    				<a  class="JS-a" href="#">属性排序</a><span></span>
+								
+				<div>
+				<ul class="JS-m">
+					<li><a href="/deal/list/fund/d">最新发布</a></li>
+					<li><a href="/deal/list/fund/td">融资金额</a></li>
+				</ul>
+				</div>
+			</span>
+		</div>
+	</div>
+<div class="wrap">
+
+		<span>
+			<strong>项目</strong>
+			<span>搜索到161个项目</span>
+		</span>
+	<div class="project_li">
+		<ul class="clearfix">
+		                			<li>
+							<div class="project_figure">
+					 <a class="content" href="/deal/detail/dealId/359">
+					 					 <b class="order"></b>
+					 					 <img src="http://ustatic.yuanshihui.com/attachment/201409/12/20/5412e606aeb3a_crop_270x200.jpg" title='秉鸿资本领投草原兴发' alt='秉鸿资本领投草原兴发'>
+					 </a>
+						<a href="/deal/detail/dealId/359">
+						<h3 title='秉鸿资本领投草原兴发'>秉鸿资本领投草原兴发</h3>
+						</a>
+						 			             						 <span><i class="bj"></i>北京市</span>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="engery"></i>仓储服务</span>
+						 					</div>
+					<div class="project_caption">
+						<h6>融资金额:<span>2500万</span></h6>
+												<h4><span style='width:0%'></span></h4>
+								                <ul class="target clearfix">
+		                		                	<li class="b_w"><b>0%</b><span>已达</span></li>
+		                	<li class="c"><b>10万</b><span>预约金额</span></li>
+		                	<li class="change_margin"><b>170天</b><span>剩余时间</span></li>
+		                		                </ul>
+					</div>
+				</li>
+		        			<li>
+							<div class="project_figure">
+					 <a class="content" href="/deal/detail/dealId/313">
+					 					 <b class="order"></b>
+					 					 <img src="http://ustatic.yuanshihui.com/attachment/201408/06/17/53e1eed2479f8_crop_270x200.jpg" title='都市小资和白领最爱的时尚花草茶饮料' alt='都市小资和白领最爱的时尚花草茶饮料'>
+					 </a>
+						<a href="/deal/detail/dealId/313">
+						<h3 title='都市小资和白领最爱的时尚花草茶饮料'>都市小资和白领最爱的时尚花...</h3>
+						</a>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="bj"></i>江苏省</span>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="engery"></i>生物技术</span>
+						 					</div>
+					<div class="project_caption">
+						<h6>融资金额:<span>300万</span></h6>
+												<h4><span style='width:0%'></span></h4>
+								                <ul class="target clearfix">
+		                		                	<li class="b_w"><b>0%</b><span>已达</span></li>
+		                	<li class="c"><b>0万</b><span>预约金额</span></li>
+		                	<li class="change_margin"><b>179天</b><span>剩余时间</span></li>
+		                		                </ul>
+					</div>
+				</li>
+		           
+           <li class='chargin_margin'>
+        					<div class="project_figure">
+					 <a class="content" href="/deal/detail/dealId/416">
+					 					 <b class="order"></b>
+					 					 <img src="http://ustatic.yuanshihui.com/attachment/201408/06/10/53e191e9d9e49_crop_270x200.jpg" title='“乐积分App&quot;' alt='“乐积分App&quot;'>
+					 </a>
+						<a href="/deal/detail/dealId/416">
+						<h3 title='“乐积分App&quot;'>“乐积分App&quot;</h3>
+						</a>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="bj"></i>上海市</span>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="engery"></i>移动应用</span>
+						 					</div>
+					<div class="project_caption">
+						<h6>融资金额:<span>100万</span></h6>
+												<h4><span style='width:0%'></span></h4>
+								                <ul class="target clearfix">
+		                		                	<li class="b_w"><b>0%</b><span>已达</span></li>
+		                	<li class="c"><b>0万</b><span>预约金额</span></li>
+		                	<li class="change_margin"><b>179天</b><span>剩余时间</span></li>
+		                		                </ul>
+					</div>
+				</li>
+		        			<li>
+							<div class="project_figure">
+					 <a class="content" href="/deal/detail/dealId/513">
+					 					 <b class="order"></b>
+					 					 <img src="http://ustatic.yuanshihui.com/attachment/201408/16/18/53ef35f52f7ef_crop_270x200.jpg" title='手机APP    机会' alt='手机APP    机会'>
+					 </a>
+						<a href="/deal/detail/dealId/513">
+						<h3 title='手机APP    机会'>手机APP    机会</h3>
+						</a>
+						 			             						 <span><i class="bj"></i>北京市</span>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="engery"></i>移动应用</span>
+						 					</div>
+					<div class="project_caption">
+						<h6>融资金额:<span>100万</span></h6>
+												<h4><span style='width:0%'></span></h4>
+								                <ul class="target clearfix">
+		                		                	<li class="b_w"><b>0%</b><span>已达</span></li>
+		                	<li class="c"><b>0万</b><span>预约金额</span></li>
+		                	<li class="change_margin"><b>179天</b><span>剩余时间</span></li>
+		                		                </ul>
+					</div>
+				</li>
+		        			<li>
+							<div class="project_figure">
+					 <a class="content" href="/deal/detail/dealId/586">
+					 					 <b class="order"></b>
+					 					 <img src="http://ustatic.yuanshihui.com/attachment/201408/28/15/53fed5149cd1f_crop_270x200.jpg" title='微信服务商-商家O2O移动解决方案' alt='微信服务商-商家O2O移动解决方案'>
+					 </a>
+						<a href="/deal/detail/dealId/586">
+						<h3 title='微信服务商-商家O2O移动解决方案'>微信服务商-商家O2O移动...</h3>
+						</a>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="bj"></i>海南省</span>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="engery"></i>移动终端</span>
+						 					</div>
+					<div class="project_caption">
+						<h6>融资金额:<span>60万</span></h6>
+												<h4><span style='width:0%'></span></h4>
+								                <ul class="target clearfix">
+		                		                	<li class="b_w"><b>0%</b><span>已达</span></li>
+		                	<li class="c"><b>0万</b><span>预约金额</span></li>
+		                	<li class="change_margin"><b>179天</b><span>剩余时间</span></li>
+		                		                </ul>
+					</div>
+				</li>
+		           
+           <li class='chargin_margin'>
+        					<div class="project_figure">
+					 <a class="content" href="/deal/detail/dealId/528">
+					 					 <b class="order"></b>
+					 					 <img src="http://ustatic.yuanshihui.com/attachment/201408/19/16/53f3047bb27ec_crop_270x200.png" title='微友同城香蕉校园版APP' alt='微友同城香蕉校园版APP'>
+					 </a>
+						<a href="/deal/detail/dealId/528">
+						<h3 title='微友同城香蕉校园版APP'>微友同城香蕉校园版APP</h3>
+						</a>
+						 			             						 <span><i class="bj"></i>北京市</span>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="engery"></i>移动应用</span>
+						 					</div>
+					<div class="project_caption">
+						<h6>融资金额:<span>600万</span></h6>
+												<h4><span style='width:0%'></span></h4>
+								                <ul class="target clearfix">
+		                		                	<li class="b_w"><b>0%</b><span>已达</span></li>
+		                	<li class="c"><b>0万</b><span>预约金额</span></li>
+		                	<li class="change_margin"><b>179天</b><span>剩余时间</span></li>
+		                		                </ul>
+					</div>
+				</li>
+		        			<li>
+							<div class="project_figure">
+					 <a class="content" href="/deal/detail/dealId/625">
+					 					 <b class="order"></b>
+					 					 <img src="http://ustatic.yuanshihui.com/attachment/201409/02/18/54059d637571d_crop_270x200.png" title='86gift-自主设计、个性定制' alt='86gift-自主设计、个性定制'>
+					 </a>
+						<a href="/deal/detail/dealId/625">
+						<h3 title='86gift-自主设计、个性定制'>86gift-自主设计、个性定制</h3>
+						</a>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="bj"></i>上海市</span>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="engery"></i>网上购物</span>
+						 					</div>
+					<div class="project_caption">
+						<h6>融资金额:<span>280万</span></h6>
+												<h4><span style='width:0%'></span></h4>
+								                <ul class="target clearfix">
+		                		                	<li class="b_w"><b>0%</b><span>已达</span></li>
+		                	<li class="c"><b>0万</b><span>预约金额</span></li>
+		                	<li class="change_margin"><b>179天</b><span>剩余时间</span></li>
+		                		                </ul>
+					</div>
+				</li>
+		        			<li>
+							<div class="project_figure">
+					 <a class="content" href="/deal/detail/dealId/639">
+					 					 <b class="order"></b>
+					 					 <img src="http://ustatic.yuanshihui.com/attachment/201409/03/23/54072e9aa44c2_crop_270x200.jpg" title='脉汇通' alt='脉汇通'>
+					 </a>
+						<a href="/deal/detail/dealId/639">
+						<h3 title='脉汇通'>脉汇通</h3>
+						</a>
+						 			             						 <span><i class="bj"></i>北京市</span>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="engery"></i>互联网金融</span>
+						 					</div>
+					<div class="project_caption">
+						<h6>融资金额:<span>50万</span></h6>
+												<h4><span style='width:0%'></span></h4>
+								                <ul class="target clearfix">
+		                		                	<li class="b_w"><b>0%</b><span>已达</span></li>
+		                	<li class="c"><b>0万</b><span>预约金额</span></li>
+		                	<li class="change_margin"><b>179天</b><span>剩余时间</span></li>
+		                		                </ul>
+					</div>
+				</li>
+		           
+           <li class='chargin_margin'>
+        					<div class="project_figure">
+					 <a class="content" href="/deal/detail/dealId/668">
+					 					 <b class="order"></b>
+					 					 <img src="http://ustatic.yuanshihui.com/attachment/201409/09/22/540f0ab5c6443_crop_270x200.jpg" title='日福莱海、陆、空健康蔬果' alt='日福莱海、陆、空健康蔬果'>
+					 </a>
+						<a href="/deal/detail/dealId/668">
+						<h3 title='日福莱海、陆、空健康蔬果'>日福莱海、陆、空健康蔬果</h3>
+						</a>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="bj"></i>浙江省</span>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="engery"></i>生物技术</span>
+						 					</div>
+					<div class="project_caption">
+						<h6>融资金额:<span>1000万</span></h6>
+												<h4><span style='width:0%'></span></h4>
+								                <ul class="target clearfix">
+		                		                	<li class="b_w"><b>0%</b><span>已达</span></li>
+		                	<li class="c"><b>0万</b><span>预约金额</span></li>
+		                	<li class="change_margin"><b>179天</b><span>剩余时间</span></li>
+		                		                </ul>
+					</div>
+				</li>
+		        			<li>
+							<div class="project_figure">
+					 <a class="content" href="/deal/detail/dealId/677">
+					 					 <b class="order"></b>
+					 					 <img src="http://ustatic.yuanshihui.com/attachment/201409/10/18/54102212c2d59_crop_270x200.jpg" title='垂直社交网络——商会社交' alt='垂直社交网络——商会社交'>
+					 </a>
+						<a href="/deal/detail/dealId/677">
+						<h3 title='垂直社交网络——商会社交'>垂直社交网络——商会社交</h3>
+						</a>
+						 			             						 <span><i class="bj"></i>北京市</span>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="engery"></i>社区</span>
+						 					</div>
+					<div class="project_caption">
+						<h6>融资金额:<span>800万</span></h6>
+												<h4><span style='width:0%'></span></h4>
+								                <ul class="target clearfix">
+		                		                	<li class="b_w"><b>0%</b><span>已达</span></li>
+		                	<li class="c"><b>0万</b><span>预约金额</span></li>
+		                	<li class="change_margin"><b>177天</b><span>剩余时间</span></li>
+		                		                </ul>
+					</div>
+				</li>
+		        			<li>
+							<div class="project_figure">
+					 <a class="content" href="/deal/detail/dealId/570">
+					 					 <b class="order"></b>
+					 					 <img src="http://ustatic.yuanshihui.com/attachment/201408/26/12/53fc144151174_crop_270x200.jpg" title='高速超景深智能精密光学检测装备' alt='高速超景深智能精密光学检测装备'>
+					 </a>
+						<a href="/deal/detail/dealId/570">
+						<h3 title='高速超景深智能精密光学检测装备'>高速超景深智能精密光学检测装备</h3>
+						</a>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="bj"></i>江苏省</span>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="engery"></i>智能手表</span>
+						 					</div>
+					<div class="project_caption">
+						<h6>融资金额:<span>600万</span></h6>
+												<h4><span style='width:12%'></span></h4>
+								                <ul class="target clearfix">
+		                		                	<li class="b_w"><b>12%</b><span>已达</span></li>
+		                	<li class="c"><b>70万</b><span>预约金额</span></li>
+		                	<li class="change_margin"><b>172天</b><span>剩余时间</span></li>
+		                		                </ul>
+					</div>
+				</li>
+		           
+           <li class='chargin_margin'>
+        					<div class="project_figure">
+					 <a class="content" href="/deal/detail/dealId/647">
+					 					 <b class="order"></b>
+					 					 <img src="http://ustatic.yuanshihui.com/attachment/201409/05/13/54094a33a9979_crop_270x200.jpg" title='拍车365' alt='拍车365'>
+					 </a>
+						<a href="/deal/detail/dealId/647">
+						<h3 title='拍车365'>拍车365</h3>
+						</a>
+						 			             						 <span><i class="bj"></i>北京市</span>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="engery"></i>移动终端</span>
+						 					</div>
+					<div class="project_caption">
+						<h6>融资金额:<span>500万</span></h6>
+												<h4><span style='width:100%'></span></h4>
+								                <ul class="target clearfix">
+		                		                	<li class="b_w"><b>100%</b><span>已达</span></li>
+		                	<li class="c"><b>638万</b><span>预约金额</span></li>
+		                	<li class="change_margin"><b>0天</b><span>剩余时间</span></li>
+		                		                </ul>
+					</div>
+				</li>
+		        			<li>
+							<div class="project_figure">
+					 <a class="content" href="/deal/detail/dealId/624">
+					 					 <b class="order"></b>
+					 					 <img src="http://ustatic.yuanshihui.com/attachment/201409/04/16/54081e31b708a_crop_270x200.JPG" title='O2O全网链3D服装平台' alt='O2O全网链3D服装平台'>
+					 </a>
+						<a href="/deal/detail/dealId/624">
+						<h3 title='O2O全网链3D服装平台'>O2O全网链3D服装平台</h3>
+						</a>
+						 			             						 <span><i class="bj"></i>北京市</span>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="engery"></i>网上购物</span>
+						 					</div>
+					<div class="project_caption">
+						<h6>融资金额:<span>1000万</span></h6>
+												<h4><span style='width:0%'></span></h4>
+								                <ul class="target clearfix">
+		                		                	<li class="b_w"><b>0%</b><span>已达</span></li>
+		                	<li class="c"><b>0万</b><span>预约金额</span></li>
+		                	<li class="change_margin"><b>172天</b><span>剩余时间</span></li>
+		                		                </ul>
+					</div>
+				</li>
+		        			<li>
+							<div class="project_figure">
+					 <a class="content" href="/deal/detail/dealId/616">
+					 					 <b class="order"></b>
+					 					 <img src="http://ustatic.yuanshihui.com/attachment/201409/01/22/5404811817feb_crop_270x200.jpg" title='翻糖艺术蛋糕项目' alt='翻糖艺术蛋糕项目'>
+					 </a>
+						<a href="/deal/detail/dealId/616">
+						<h3 title='翻糖艺术蛋糕项目'>翻糖艺术蛋糕项目</h3>
+						</a>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="bj"></i>江苏省</span>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="engery"></i>网上购物</span>
+						 					</div>
+					<div class="project_caption">
+						<h6>融资金额:<span>500万</span></h6>
+												<h4><span style='width:0%'></span></h4>
+								                <ul class="target clearfix">
+		                		                	<li class="b_w"><b>0%</b><span>已达</span></li>
+		                	<li class="c"><b>0万</b><span>预约金额</span></li>
+		                	<li class="change_margin"><b>172天</b><span>剩余时间</span></li>
+		                		                </ul>
+					</div>
+				</li>
+		           
+           <li class='chargin_margin'>
+        					<div class="project_figure">
+					 <a class="content" href="/deal/detail/dealId/392">
+					 					 <b class="order"></b>
+					 					 <img src="http://ustatic.yuanshihui.com/attachment/201408/05/09/53e038127c53b_crop_270x200.jpg" title='脉搏血压健康手表+实时物联网健康管理' alt='脉搏血压健康手表+实时物联网健康管理'>
+					 </a>
+						<a href="/deal/detail/dealId/392">
+						<h3 title='脉搏血压健康手表+实时物联网健康管理'>脉搏血压健康手表+实时物联...</h3>
+						</a>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="bj"></i>浙江省</span>
+						 			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             			             						 <span><i class="engery"></i>健康管理</span>
+						 					</div>
+					<div class="project_caption">
+						<h6>融资金额:<span>1000万</span></h6>
+												<h4><span style='width:2%'></span></h4>
+								                <ul class="target clearfix">
+		                		                	<li class="b_w"><b>2%</b><span>已达</span></li>
+		                	<li class="c"><b>20万</b><span>预约金额</span></li>
+		                	<li class="change_margin"><b>169天</b><span>剩余时间</span></li>
+		                		                </ul>
+					</div>
+				</li>
+						</ul>
+	  </div>
+	  <p class="page clearfix">
+		      &nbsp;<a class='curpage'>1</a>&nbsp;<a class='btn-a' href='/deal/list/p/2'>2</a>&nbsp;<a class='btn-a' href='/deal/list/p/3'>3</a>&nbsp;<a class='btn-a' href='/deal/list/p/4'>4</a>&nbsp;<a class='btn-a' href='/deal/list/p/5'>5</a>  <a  href='/deal/list/p/6' >...</a>  <a    href='/deal/list/p/11' >11</a> <a class='nex' href='/deal/list/p/2'>〉</a>	  </p>
+	</div>
+</div>
+<div class="aboutUs-box">
+<p class="wrap"><a href="/about/about">了解我们</a></p>
+</div><script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/list.js?v=20140508'></script>
+<div class="footer">
+	<div class="wrap">
+	    <ul class="clearfix">	    	
+	    	<li><a href="/about/contact">联系我们</a></li>
+	    	<li><a href="/about/entrepreneurs">用户指南</a></li>
+	    	<!--<li class="qaw"><a href="javascript:;">Q&A</a></li>-->
+	    	<li><a href="javascript:;">合作机构</a></li>
+	    	<li class="link_b"><a href="/about/friend">友情链接</a></li>
+
+	    </ul>
+		<p>&copy;2014  北京原始会投资管理有限公司   YUANSHIHUI.COM  版权所有   京ICP备14027236号-1 </p>
+	</div>
+</div>
+<script type="text/javascript" src="http://istatic.yuanshihui.com/angelpc/js/jquery.cookie.js?v=20140508"></script>
+
+<!--footer end-->
+</body>
+</html>
+<script type="text/javascript">
+var value=null;
+$(document).ready(function(){
+	$.cookie('zcid',value);
+});
+</script>
+<script type="text/javascript">
+var _ncf={"prd":"yuanshihui","pstr":"","pfunc":null,"pcon":"&nm=deal&na=list","pck":{"beid":"beid","zcid":"zcid"}};
+    (function(p,h,s){var o=document.createElement(h);o.src=s;p.appendChild(o)})(document.getElementsByTagName("HEAD")[0],"script","http://zcstatic.wangxingroup.com/js/ncfpb.1.1.min.js");
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53854063-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

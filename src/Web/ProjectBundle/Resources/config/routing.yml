@@ -1,3 +1,9 @@
-web_project_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: WebProjectBundle:Default:index }
+#项目模块的项目列表页面
+web_project_item_list_page:
+    path:     /project/item/list
+    defaults: { _controller: WebProjectBundle:Item:list }
+
+#项目模块的项目详情页面
+web_project_item_details_page:
+    path:     /project/item/details
+    defaults: { _controller: WebProjectBundle:Item:details }

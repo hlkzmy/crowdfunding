@@ -17,9 +17,8 @@ class AboutController extends Controller
     	
     	
     	
-        return $this->render('WebPageBundle:Index:us.html.twig');
+        return $this->render('WebPageBundle:About:us.html.twig');
     }
-    
     
     
 }

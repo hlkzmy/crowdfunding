@@ -19,7 +19,7 @@ class PersonalInvestorController extends UserBaseController
     public function registerAction(){
     	 
     	 
-    	return new Response();
+    	return $this->render('WebUserBundle:ProjectOwner:register.html.twig');
     }//function registerAction() end
     
     

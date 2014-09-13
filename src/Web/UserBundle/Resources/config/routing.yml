@@ -2,15 +2,28 @@ web_user_homepage:
     path:     /hello/{name}
     defaults: { _controller: WebUserBundle:Default:index }
 
+#无论哪种类型的用户都使用的统一登录界面
+web_user_login:
+    path:     /user/login
+    defaults: { _controller: WebUserBundle:Common:login }
+    
+#无论哪种类型的用户都使用的统一注销界面
+web_user_logout:
+    path:     /user/logout
+    defaults: { _controller: WebUserBundle:Common:logout }
+
+
 #项目创建人的注册页面
 web_user_project_owner_register_page:
     path:     /user/project-owner/register
     defaults: { _controller: WebUserBundle:ProjectOwner:register }
+
     
 #个人投资者的注册页面
 web_user_personal_investor_register_page:
     path:     /user/personal-investor/register
     defaults: { _controller: WebUserBundle:PersonalInvestor:register }
+
     
 #机构投资人的注册页面
 web_user_company_investor_register_page:

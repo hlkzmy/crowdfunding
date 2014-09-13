@@ -34,20 +34,34 @@
 		<a href="/user/register" class="reg">注册</a>
 	</div>
 	</div>
-<link rel="stylesheet" type="text/css" href="http://istatic.yuanshihui.com/angelpc/v2/static/css/contact.css?v=20140508">
+<link rel="stylesheet" type="text/css" href="http://istatic.yuanshihui.com/angelpc/css/new/login.css?v=20140508">
 
 <!-- content static -->
-<div class="station m-padding clearfix">
-   <div class="m-about-left">
-       <p><img src="http://istatic.yuanshihui.com/angelpc/v2/static/images/footer/pok_03.png?v=20140508"></p>
-       <p class="m-said"><em>原始会</em>是网信金融旗下的股权众筹平台，致力于为投资人和创业者提供一站式投融资综合解决方案，帮助创业者迅速融到资金，帮助投资人发现优质项目。在这里您可以发布项目，并通过这个平台面向投资人融资，让投资人一起来众投。同时，我们还提供资源对接、宣传报道、可视化估值、财务预测、融资辅导等 优质的增值服务。我们的宗旨是让天下没有难融的项目，让天下没有投不出去的钱，实现多方共赢！</p>
-   </div>
-   <div class="m-about-right"><img src="http://istatic.yuanshihui.com/angelpc/v2/static/images/footer/pok_05.jpg?v=20140508"></div>
+<div  class="pass-bg">
+	<div  class="pass-box wid315">
+		<div  class="pass-title">用户登录</div>
+		<form name="loginForm" wx-validator wx-validator-ajax action="/user/login" method="post">
+			<p class="form-item">
+				<label class="btn-base pass-lable label-un common-sprite">手机号</label>
+				<input type="text" wx-validator-rule="required" class="text-input text-input-log" name="username" placeholder="请输入手机号">
+			</p>
+			<p class="form-item">
+				<label class="btn-base pass-lable label-pw common-sprite">密码</label>
+				<input type="password"  wx-validator-rule="required"  class="text-input text-input-log" name="password" placeholder="请输入密码">
+			</p>
+									<div class="login-form-ipt clearfix" id="needCode" style="display:none;">
+							<input id="codeInp" class="ie6fixpic" name="code" type="text" placeholder="请输入验证码"/>
+                <a href="javascript:void(0);"><img src="/verify/code" id="codeimg"></a>
+			</div>
+			<p class="form-item">
+				<input type="submit" class="btn-submit" value="登录">
+				<a href="/user/register" class="btn-reg">注册</a><a href="/findpwd/index" class="fgtpwd">忘记密码？</a></p>
+		</form>
+	</div>
 </div>
-<!-- content end -->	
+<!-- content end --> 
 
-<!--mian-content  end-->
-<!--footer static-->
+
 <div class="footer">
 	<div class="wrap">
 	    <ul class="clearfix">	    	
@@ -73,7 +87,7 @@ $(document).ready(function(){
 });
 </script>
 <script type="text/javascript">
-var _ncf={"prd":"yuanshihui","pstr":"","pfunc":null,"pcon":"&nm=about&na=about","pck":{"beid":"beid","zcid":"zcid"}};
+var _ncf={"prd":"yuanshihui","pstr":"","pfunc":null,"pcon":"&nm=user&na=login","pck":{"beid":"beid","zcid":"zcid"}};
     (function(p,h,s){var o=document.createElement(h);o.src=s;p.appendChild(o)})(document.getElementsByTagName("HEAD")[0],"script","http://zcstatic.wangxingroup.com/js/ncfpb.1.1.min.js");
 </script>
 <script>
@@ -85,5 +99,6 @@ var _ncf={"prd":"yuanshihui","pstr":"","pfunc":null,"pcon":"&nm=about&na=about",
   ga('create', 'UA-53854063-1', 'auto');
   ga('send', 'pageview');
 
-</script><script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/details.js?v=20140508'></script>
-<!--footer end-->
+</script><script type="text/javascript" src="http://istatic.yuanshihui.com/angelpc/js/new/newLogin.js?v=20140508"></script>
+
+
