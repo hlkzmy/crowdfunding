@@ -15,6 +15,16 @@ class CommonController extends UserBaseController
     	
     }//function loginAction() end
     
+    /**
+     * 用户注册界面
+     */
+    public function registerAction(){
+    
+    
+    
+    	return $this->render('WebUserBundle:Common:register.html.twig');
+    }//function registerAction() end
+    
     
     public function logoutAction(){
     

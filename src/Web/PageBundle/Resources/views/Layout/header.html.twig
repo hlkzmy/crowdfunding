@@ -3,9 +3,9 @@
 	<div class="menuBar">
 		<ul class="clearfix">
 			<li><a href="/">首页</a></li>
-			<li><a href="/deal/list">浏览项目</a></li>
-			<li><a href="/startup/deal">发起项目</a></li>
-			<li><a href="/about/about">关于我们</a></li>
+			<li><a href="{{ path('web_project_item_list_page')}}">浏览项目</a></li>
+			<li><a href="#">发起项目</a></li>
+			<li><a href="{{ path('web_page_about_us')}}">关于我们</a></li>
 		</ul>
 	</div>
 		<form id="se" name="se" action="/deal/list" method="post" wx-validator wx-validator-ajax >
@@ -17,7 +17,7 @@
 			</span>
 		</form>
 	<div class="userbox">
-		<a href="/user/login" class="logon">登录</a>
-		<a href="/user/register" class="reg">注册</a>
+		<a href="{{ path('web_user_login')}}" class="logon">登录</a>
+		<a href="{{ path('web_user_register')}}" class="reg">注册</a>
 	</div>
 </div><!--header end-->

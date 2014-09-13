@@ -1,43 +1,7 @@
+{% extends 'WebPageBundle:Layout:layout.html.twig' %}
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8"/>
-<meta name="google-site-verification" content="ut7BeTtfYcLMGQV17SBt-6isJj4QwdlXQLemK290nAs" /> 
-<meta name="360-site-verification" content="e14ad415b8f36bb6cbfed7027688c5b3" />
-<title>原始会</title>
-<link rel="stylesheet" type="text/css" href="http://istatic.yuanshihui.com/angelpc/v2/static/css/base.css?v=20140508">
-<link rel="stylesheet" type="text/css" href="http://istatic.yuanshihui.com/angelpc/v2/static/css/common.css?v=20140508">
-<script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/jquery-1.10.2.min.js?v=20140508'></script>
-<script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/wx.js?v=20140508' wx-main></script>
-<script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/wx.config.js?v=20140508'></script>
-<script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/common.js?v=20140508'></script>
-</head>
-<body>
-<!--header static-->
-<div class="header">
-	<a href="/" class="logo"><img src="http://istatic.yuanshihui.com/angelpc/v2/static/images/index/logo.png?v=20140508" title="北京原始会投资管理有限公司" alt="原始会" /></a>
-	<div class="menuBar">
-		<ul class="clearfix">
-			<li><a href="/">首页</a></li>
-			<li><a href="/deal/list">浏览项目</a></li>
-			<li><a href="/startup/deal">发起项目</a></li>
-			<li><a href="/about/about">关于我们</a></li>
-		</ul>
-	</div>
-<form id="se" name="se" action="/deal/list" method="post" wx-validator wx-validator-ajax >
-	<span class="search"><a type="submit" href="###"><img src="http://istatic.yuanshihui.com/angelpc/v2/static/images/index/icons.png?v=20140508" /></a>
-	<input wx-validator-notip name="q" type="text" value=""  placeholder="输入关键词" />
-	</span>
-</form>
-			<div class="userbox">
-		<a href="/user/login" class="logon">登录</a>
-		<a href="/user/register" class="reg">注册</a>
-	</div>
-	</div>
+{% block body %}
 <link rel="stylesheet" type="text/css" href="http://istatic.yuanshihui.com/angelpc/v2/static/css/list.css?v=20140508">
-
-<!--header end-->
 <div>
 <div class="filter-box-warp">
 		<div class="filter-box">
@@ -438,43 +402,10 @@
 	</div>
 </div>
 <div class="aboutUs-box">
-<p class="wrap"><a href="/about/about">了解我们</a></p>
-</div><script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/list.js?v=20140508'></script>
-<div class="footer">
-	<div class="wrap">
-	    <ul class="clearfix">	    	
-	    	<li><a href="/about/contact">联系我们</a></li>
-	    	<li><a href="/about/entrepreneurs">用户指南</a></li>
-	    	<!--<li class="qaw"><a href="javascript:;">Q&A</a></li>-->
-	    	<li><a href="javascript:;">合作机构</a></li>
-	    	<li class="link_b"><a href="/about/friend">友情链接</a></li>
-
-	    </ul>
-		<p>&copy;2014  北京原始会投资管理有限公司   YUANSHIHUI.COM  版权所有   京ICP备14027236号-1 </p>
-	</div>
+	<p class="wrap"><a href="/about/about">了解我们</a></p>
 </div>
+<script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/list.js?v=20140508'></script>
 <script type="text/javascript" src="http://istatic.yuanshihui.com/angelpc/js/jquery.cookie.js?v=20140508"></script>
+{% endblock %}
 
-<!--footer end-->
-</body>
-</html>
-<script type="text/javascript">
-var value=null;
-$(document).ready(function(){
-	$.cookie('zcid',value);
-});
-</script>
-<script type="text/javascript">
-var _ncf={"prd":"yuanshihui","pstr":"","pfunc":null,"pcon":"&nm=deal&na=list","pck":{"beid":"beid","zcid":"zcid"}};
-    (function(p,h,s){var o=document.createElement(h);o.src=s;p.appendChild(o)})(document.getElementsByTagName("HEAD")[0],"script","http://zcstatic.wangxingroup.com/js/ncfpb.1.1.min.js");
-</script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-53854063-1', 'auto');
-  ga('send', 'pageview');
-
-</script>

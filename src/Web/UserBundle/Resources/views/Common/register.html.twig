@@ -1,0 +1,46 @@
+{% extends 'WebPageBundle:Layout:layout.html.twig' %}
+
+{% block body %}
+<link rel="stylesheet" type="text/css" href="http://istatic.yuanshihui.com/angelpc/css/new/login.css?v=20140508">
+<!-- content static -->
+<div  class="pass-bg">
+	<div  class="pass-box wid390">
+		<div  class="pass-title">用户注册</div>
+		<form wx-validator-noscroll="true" wx-validator wx-validator-ajax action="/user/register" method="post" name="registerForm">
+			<p class="form-item clearfix">
+				<label class="reg-lable">手机号</label>
+				<input type="text" wx-validator-rule="required|mobile" class="text-input" name="mobile" placeholder="请输入手机号">
+			</p>
+			<p class="form-item clearfix">
+				<label class="reg-lable">密码</label>
+				<input type="password"  wx-validator-rule="required"  class="text-input" name="password" placeholder="请输入密码">
+			</p>
+			<p class="form-item clearfix">
+				<label class="reg-lable">确认密码</label>
+				<input type="password"  wx-validator-rule="required"  class="text-input" name="confirm_user_pwd" placeholder="请输入确认密码">
+			</p>
+			<p class="form-item clearfix">
+				<label class="reg-lable">昵称</label>
+				<input type="text"  wx-validator-rule="required"  class="text-input" name="user_name" placeholder="请输入昵称">
+			</p>
+			<p class="form-item clearfix">
+				<label class="reg-lable">验证码</label>
+				<input type="text"  wx-validator-rule="required"  class="text-input wid190 fl" name="code" placeholder="请输入验证码">
+				<a id="getValid" href="#"  class="btn-getCode" >获取</a>
+			</p>
+			<span id="wx-validator-code-required" class="error-text" style="display:none">不能为空</span>
+			<p class="form-item form-item-member  mar-l75 clearfix">
+			
+				<input name="article" type="checkbox" wx-validator-article-nocheck="true">
+				<label class=""  wx-validator-rule="required">阅读并同意原始会的<a href="/terms/join" class="pass-red" target="_blank">《服务协议》</a></label>
+ <span id="wx-validator-article-nocheck" style="color:red;display:none;">请先阅读我</span>
+			</p>
+			<p class="form-item  clearfix">
+				<label class="reg-lable"></label>
+				<a type="submit" href="#"  class="btn-submit" >注册</a>
+				</p>
+		</form>
+	</div>
+</div>
+<!-- content end -->
+{% endblock %}
