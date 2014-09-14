@@ -55,6 +55,15 @@ class CommonController extends UserBaseController
     }//function checkRegisterAction() end
     
     
+    public function layoutAction(){
+    
+    
+    
+    
+    	return $this->render('WebUserBundle:Console:index.html.twig');
+    }
+    
+    
     
     public function logoutAction(){
     

@@ -1,0 +1,33 @@
+{% extends 'WebPageBundle:Layout:layout.html.twig' %}
+
+{% block body %}
+<body class="page-header-fixed page-quick-sidebar-over-content">
+
+	{{ include('WebUserBundle:Console:header.html.twig')}}
+
+<div class="page-container">
+	{{ include('WebUserBundle:Console:sidebar.html.twig')}}
+           
+	<div class="page-content-wrapper">
+		<div class="page-content">
+			<div class="page-content-body">
+				<!-- HERE WILL BE LOADED AN AJAX CONTENT -->
+			</div>
+		</div>
+	</div><!-- END page-content-wrapper -->
+	
+</div><!-- END PAGE CONTAINER -->
+{% endblock%}
+
+
+
+{% block PAGE_INIT_SCRIPT %}
+<script type="text/javascript">
+$(document).ready(function() {
+ 
+    Metronic.init(); // init metronic core components
+    Layout.init(); // init current layout
+  
+});
+</script>
+{% endblock %}

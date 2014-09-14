@@ -48,7 +48,7 @@ Page Header
   border: 0px;
   padding: 0px;
   box-shadow: none;
-  height: 46px;
+  height: 100px;
   min-height: 46px;
   filter: none;
   background-image: none;
@@ -65,12 +65,14 @@ Page Header
   z-index: 9995;
 }
 .page-header.navbar .page-logo {
-  float: left;
-  display: block;
-  width: 235px;
-  height: 46px;
-  padding-left: 20px;
-  padding-right: 20px;
+	display: block;
+	width: 270px;
+	height: 92px;
+	overflow:hidden;
+	padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 64px;
+    float: left;
 }
 .page-sidebar-closed.page-sidebar-closed-hide-logo .page-header.navbar .page-logo {
   padding: 0;

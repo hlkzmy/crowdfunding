@@ -14,7 +14,7 @@ class ConsoleController extends UserBaseController
 		
 		
 		
-		return $this->render('WebUserBundle:Console:layout.html.twig');
+		return $this->render('WebUserBundle:Console:index.html.twig');
 	}
     
     
