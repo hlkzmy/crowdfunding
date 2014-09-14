@@ -176,10 +176,11 @@ p.p-tl{ width:100%; text-align:center; padding-top:30px;}
 }
 .header .logo{
 	display: block;
-	width: 98px;
-	height: 44px;
-	padding-top: 30px;
-    padding-left: 27px;
+	width: 270px;
+	height: 92px;
+	overflow:hidden;
+	padding-top: 5px;
+    padding-left: 30px;
     padding-right: 64px;
     float: left;
 }

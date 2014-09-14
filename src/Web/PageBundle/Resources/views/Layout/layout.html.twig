@@ -4,14 +4,37 @@
 <meta charset="utf-8"/>
 <meta name="google-site-verification" content="ut7BeTtfYcLMGQV17SBt-6isJj4QwdlXQLemK290nAs" /> 
 <meta name="360-site-verification" content="e14ad415b8f36bb6cbfed7027688c5b3" />
-<title>原始会</title>
+<title>众投社-股权众筹平台</title>
 <link rel="stylesheet" type="text/css" href="http://istatic.yuanshihui.com/angelpc/v2/static/css/base.css?v=20140508">
 <link rel="stylesheet" type="text/css" href="{{ asset('bundles/web/common/css/common.css')}}">
-{% block page_level_css %} {% endblock %}
-<script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/jquery-1.10.2.min.js?v=20140508'></script>
-<script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/wx.js?v=20140508' wx-main></script>
-<script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/wx.config.js?v=20140508'></script>
-<script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/common.js?v=20140508'></script>
+{% block GLOBAL_MANDATORY_STYLES %}
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="{{ asset('assets/global/plugins/font-awesome/css/font-awesome.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{ asset('assets/global/plugins/simple-line-icons/simple-line-icons.min.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{ asset('assets/global/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{ asset('assets/global/plugins/uniform/css/uniform.default.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{ asset('assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css')}}" rel="stylesheet" type="text/css"/>
+<!-- END GLOBAL MANDATORY STYLES -->
+{% endblock %}
+
+
+{% block PAGE_LEVEL_STYLES  %}
+<!-- BEGIN PAGE LEVEL STYLES -->
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/global/plugins/select2/select2.css')}}"/>
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/global/plugins/bootstrap-datetimepicker/css/datetimepicker.css')}}"/>
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css')}}"/>
+<!-- END PAGE LEVEL STYLES -->
+{% endblock %}
+
+{% block BEGIN_THEME_STYLES  %}
+<!-- BEGIN THEME STYLES -->
+<link href="{{ asset('assets/global/css/component.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{ asset('assets/global/css/plugins.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{ asset('assets/admin/layout/css/layout.css')}}" rel="stylesheet" type="text/css"/>
+<link id="style_color" href="{{ asset('assets/admin/layout/css/themes/light.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{ asset('assets/admin/layout/css/custom.css')}}" rel="stylesheet" type="text/css"/>
+<!-- END THEME STYLES -->
+{% endblock %}
 
 </head>
 <body>
@@ -26,4 +49,43 @@
 	{% include 'WebPageBundle:Layout:footer.html.twig' %}
 {% endblock %}
 </body>
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+{% block CORE_PLUGINS %}
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="{{ asset('assets/global/plugins/respond.min.js')}}"></script>
+<script src="{{ asset('assets/global/plugins/excanvas.min.js')}}"></script> 
+<![endif]-->
+<script src="{{ asset('assets/global/plugins/jquery-1.11.0.min.js')}}" type="text/javascript"></script>
+<script src="{{ asset('assets/global/plugins/jquery-migrate-1.2.1.min.js')}}" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<script src="{{ asset('assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js')}}" type="text/javascript"></script>
+<script src="{{ asset('assets/global/plugins/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
+<script src="{{ asset('assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js')}}" type="text/javascript"></script>
+<script src="{{ asset('assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js')}}" type="text/javascript"></script>
+<script src="{{ asset('assets/global/plugins/jquery.blockui.min.js')}}" type="text/javascript"></script>
+<script src="{{ asset('assets/global/plugins/jquery.cokie.min.js')}}" type="text/javascript"></script>
+<script src="{{ asset('assets/global/plugins/uniform/jquery.uniform.min.js')}}" type="text/javascript"></script>
+<script src="{{ asset('assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+{% endblock %}
+
+{% block PAGE_LEVEL_PLUGINS %}
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script type="text/javascript" src="{{ asset('assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js')}}"></script>
+<script type="text/javascript" src="{{ asset('assets/global/plugins/datatables/media/js/jquery.dataTables.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js')}}"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+{% endblock %}
+
+{% block PAGE_LEVEL_SCRIPTS %}
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="{{ asset('assets/global/plugins/select2/select2.min.js')}}" type="text/javascript"></script>
+<script src="{{ asset('assets/global/scripts/metronic.js')}}" type="text/javascript"></script>
+<script src="{{ asset('assets/admin/layout/scripts/layout.js')}}" type="text/javascript"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+{% endblock %}
+<script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/wx.js?v=20140508' wx-main></script>
+<script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/wx.config.js?v=20140508'></script>
+<script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/common.js?v=20140508'></script>
 </html>

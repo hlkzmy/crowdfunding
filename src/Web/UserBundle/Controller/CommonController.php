@@ -28,7 +28,13 @@ class CommonController extends UserBaseController
      */
     public function registerAction(){
     
-    	$registerForm = $this->createForm('user_register_form');
+    	$registerForm = $this->createForm('user_register_form',null,array(
+														    				'attr'=>array(
+														    					'id'=>'register-form',	
+														    					'class'=>'form-horizontal'
+														    				)
+    			
+    									 ));
     	
     	$formView = $registerForm->createView();
     		
