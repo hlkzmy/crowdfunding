@@ -163,18 +163,11 @@ p.p-tl{ width:100%; text-align:center; padding-top:30px;}
 .m-progress{background: none repeat scroll 0 0 #dddddd; border-radius: 5px; height: 8px; width: 200px;} 
 .m-progress div{background: none repeat scroll 0 0 #73dcac; border-radius: 5px; height: 8px; }
 
+
 /*修改于20140718*/
 /*header*/
-.header{
-	height: 102px;
-	background: #ffffff;
-	min-width: 1024px;
-	border-bottom: 1px solid #eaeaea;
-}
-.header a{
-	color:#000000;
-}
-.header .logo{
+
+.page-header .page-logo {
 	display: block;
 	width: 270px;
 	height: 92px;
@@ -184,6 +177,21 @@ p.p-tl{ width:100%; text-align:center; padding-top:30px;}
     padding-right: 64px;
     float: left;
 }
+
+
+
+
+.header{
+	height: 102px;
+	background: #ffffff;
+	min-width: 1024px;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.header a{
+	color:#000000;
+}
+
 .header .selected a, .header a:hover,a:hover{
    color:#73dcac;
 }

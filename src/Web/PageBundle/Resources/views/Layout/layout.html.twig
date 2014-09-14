@@ -38,25 +38,25 @@
 {% endblock %}
 </head>
 
-{% block body %}
+{% block BODY_START_TAG %}
 <body>
+{% endblock %}
 
-
-{% block header %}
+{% block PAGE_HEADER %}
 	{% include 'WebPageBundle:Layout:header.html.twig' %}
 {% endblock %}
 
-<div class="page-container">
-	{% block mainer %}默认页面{% endblock %}
-</div><!-- END PAGE CONTAINER -->	
-	
+{% block PAGE_CONTAINER %}
+	<div class="page-container">
+		{% block mainer %}默认页面{% endblock %}
+	</div><!-- END PAGE CONTAINER -->	
+{% endblock %}	
 
-{% block footer %}
+{% block PAGE_FOOTER %}
 	{% include 'WebPageBundle:Layout:footer.html.twig' %}
 {% endblock %}
 
 </body>
-{% endblock %}
 
 
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
@@ -100,6 +100,4 @@
 <script src='http://istatic.yuanshihui.com/angelpc/v2/static/js/common.js?v=20140508'></script>
 
 {% block PAGE_INIT_SCRIPT %}{% endblock %}
-
-
 </html>

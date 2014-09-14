@@ -74,6 +74,7 @@ Page Header
     padding-right: 64px;
     float: left;
 }
+
 .page-sidebar-closed.page-sidebar-closed-hide-logo .page-header.navbar .page-logo {
   padding: 0;
 }

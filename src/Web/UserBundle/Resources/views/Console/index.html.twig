@@ -1,10 +1,15 @@
 {% extends 'WebPageBundle:Layout:layout.html.twig' %}
 
-{% block body %}
+{% block BODY_START_TAG %}
 <body class="page-header-fixed page-quick-sidebar-over-content">
+{% endblock %}
+	
 
+{% block PAGE_HEADER %}
 	{{ include('WebUserBundle:Console:header.html.twig')}}
+{% endblock %}
 
+{% block PAGE_CONTAINER %}
 <div class="page-container">
 	{{ include('WebUserBundle:Console:sidebar.html.twig')}}
            
@@ -18,7 +23,6 @@
 	
 </div><!-- END PAGE CONTAINER -->
 {% endblock%}
-
 
 
 {% block PAGE_INIT_SCRIPT %}
