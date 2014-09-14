@@ -1,0 +1,82 @@
+@CHARSET "UTF-8";
+@charset "utf-8";
+/*图标*/
+.common-sprite { background-image:url(../../image/new/common/icon_sprite.png); background-repeat: no-repeat; }
+/*基本按钮*/
+.btn-base { display:inline-block; *display: inline;
+zoom: 1; padding-left:5px; }
+/*输入框*/
+.text-input { border: 1px solid #DDD; color: #333; display: block; font-size: 14px; width:294px;line-height: 20px;height: 20px; padding: 12px 10px; border-radius:3px; }
+.wid390{width:390px;padding:30px 65px;}
+.wid315{width:315px;padding:50px 115px;}
+.wid190{width:190px;}
+.fl{float:left;}
+.pass-bg { height:690px; padding-top:30px;background:url(../image/log_bg.jpg) no-repeat center bottom }
+.pass-box { margin:0 auto;  background:#FFF; border-radius:3px;  }
+.pass-red { color: #FC4343; }
+.pass-title { color: #193144; font-size: 30px;  height: 30px;line-height: 30px;margin-bottom:10px; text-align: center; }
+.Error {margin-left: 68px; color: #FC4343; display: block; font-size: 12px; height: 30px; line-height: 30px; }
+.error_m{margin-left: 0;}
+.form-item { margin: 15px 0 15px; position: relative; z-index: 0; }
+.form-item-member { height:15px; }
+.mar-l75{ margin-left: 75px;}
+.pass-lable { display: block; height: 24px; left: 6px; overflow: hidden; padding: 0 0 0 24px; position: absolute; top: 12px; width: 0; z-index: 1; }
+.label-un { background-position: 0 0; }
+.label-pw { background-position: -22px 0; }
+.text-input-log { padding-left:30px; width:275px }
+.btn-submit { cursor:pointer;background:#6acc9f; border-radius:3px; width:314px; height:50px; line-height:50px; font-size:20px; text-align:center; display:inline-block; margin-bottom:20px; color:#fff }
+.btn-reg { background:#FFF; border-radius:3px; border:1px solid #6acc9f; width:312px; height:50px; line-height:50px; font-size:20px; text-align:center; display:block; color:#6acc9f }
+.btn-submit:hover {color:#fff }
+.btn-reg:hover {color:#6acc9f }
+.reg-lable{float:left;width:70px;height:40px;line-height:40px;font-size:14px;color:#333;text-align:left;}
+.btn-getCode{float:left;background:#6acc9f; border-radius:3px; width:90px; height:40px; line-height:40px; font-size:16px; text-align:center; display:block; color:#fff;margin-left:15px;float:left }
+.btn-getCode:hover{color:#fff; }
+.label-ver { display: block; margin-top:4px;height: 33px; right: 6px; overflow: hidden;  position: absolute; top: 0; width: 86px; z-index: 1; }
+
+.stepList li{
+	float: left;
+	width: 63px;
+	height: 63px;
+	margin-right: 100px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.stepList li i{
+	display: block;
+	background: url("../../image/new/common/icon_sprite.png") no-repeat;
+	width: 63px;
+	height: 63px;
+}
+.stepList li.change_margin{
+	margin-right: 0;
+}
+.stepList li i.sureAccount{
+   background-position: 0px -35px;
+}
+.stepList li i.safeVercation{
+	background-position: -84px -34px;
+}
+.stepList li i.resetPassword{
+	background-position: -160px -35px;
+}
+.stepList li.selected i.sureAccount{
+   background-position: 0px -120px;
+}
+.stepList li.selected i.safeVercation{
+	background-position: -84px -125px;
+}
+.stepList li.selected i.resetPassword{
+	background-position: -160px -120px;
+}
+.vercateMethod{
+	font-size: 24px;
+	color: #333333;
+	text-align: center;
+	padding-bottom: 46px;
+	padding-top:40px;
+}
+.btn_ml{
+	margin-left: 46px;
+}
+.btn-submit{margin-top:20px;}
+.fgtpwd{position:absolute;right:5px;top:-7px;color:red;}

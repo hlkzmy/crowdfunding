@@ -11,6 +11,11 @@ web_user_login:
 web_user_register:
     path:     /user/register
     defaults: { _controller: WebUserBundle:Common:register } 
+
+#无论哪种类型的用户都使用的注册界面的提交地址 
+web_user_register_check:
+    path:     /user/check-register
+    defaults: { _controller: WebUserBundle:Common:checkRegister} 
  
     
 #无论哪种类型的用户都使用的统一注销界面

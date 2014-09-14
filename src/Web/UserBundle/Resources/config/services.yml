@@ -1,7 +1,7 @@
-parameters:
-#    web_user.example.class: Web\UserBundle\Example
-
 services:
-#    web_user.example:
-#        class: %web_user.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+   web.user.form.type.register:
+       class: Web\UserBundle\Form\Type\RegisterType
+       arguments: [@router]
+       tags:
+           - { name: form.type, alias: user_register_form }
+   
