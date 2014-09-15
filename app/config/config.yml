@@ -62,7 +62,7 @@ doctrine:
             default:
                 connection: default
                 mappings: 
-                    WebUserBundle: ~
+                    UserCommonBundle: ~
                     
 # Swiftmailer Configuration
 swiftmailer:

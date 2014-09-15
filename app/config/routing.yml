@@ -15,7 +15,7 @@ web_project:
     prefix:   /
 
 web_user:
-    resource: "@WebUserBundle/Resources/config/routing.yml"
+    resource: "@UserCommonBundle/Resources/config/routing.yml"
     prefix:   /
 
 web_common:

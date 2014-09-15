@@ -1,7 +1,7 @@
-parameters:
-#    user_common.example.class: User\CommonBundle\Example
-
 services:
-#    user_common.example:
-#        class: %user_common.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+   web.user.form.type.register:
+       class: User\CommonBundle\Form\Type\RegisterType
+       arguments: [@router]
+       tags:
+           - { name: form.type, alias: user_register_form }
+   

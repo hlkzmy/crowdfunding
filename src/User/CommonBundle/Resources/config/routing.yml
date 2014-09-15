@@ -1,3 +1,51 @@
-user_common_homepage:
+web_user_homepage:
     path:     /hello/{name}
     defaults: { _controller: UserCommonBundle:Default:index }
+
+#无论哪种类型的用户都使用的统一登录界面
+web_user_login:
+    path:     /user/login
+    defaults: { _controller: UserCommonBundle:Common:login }
+
+#无论哪种类型的用户都使用的统一注册界面
+web_user_register:
+    path:     /user/register
+    defaults: { _controller: UserCommonBundle:Common:register } 
+
+#无论哪种类型的用户都使用的注册界面的提交地址 
+web_user_register_check:
+    path:     /user/check-register
+    defaults: { _controller: UserCommonBundle:Common:checkRegister} 
+ 
+    
+#无论哪种类型的用户都使用的统一注销界面
+web_user_logout:
+    path:     /user/logout
+    defaults: { _controller: UserCommonBundle:Common:logout }
+    
+    
+
+
+#项目创建人的注册页面
+web_user_project_owner_register_page:
+    path:     /user/project-owner/register
+    defaults: { _controller: UserCommonBundle:ProjectOwner:register }
+
+    
+#个人投资者的注册页面
+web_user_personal_investor_register_page:
+    path:     /user/personal-investor/register
+    defaults: { _controller: UserCommonBundle:PersonalInvestor:register }
+
+    
+#机构投资人的注册页面
+web_user_company_investor_register_page:
+    path:     /user/company-investor/register
+    defaults: { _controller: UserCommonBundle:CompanyInvestor:register }
+    
+    
+#用户中心的布局控制页面
+web_user_console:
+    path:     /user/console
+    defaults: { _controller: UserCommonBundle:Console:layout }
+    

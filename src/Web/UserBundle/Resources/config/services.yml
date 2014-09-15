@@ -1,7 +1,0 @@
-services:
-   web.user.form.type.register:
-       class: Web\UserBundle\Form\Type\RegisterType
-       arguments: [@router]
-       tags:
-           - { name: form.type, alias: user_register_form }
-   

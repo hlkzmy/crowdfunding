@@ -1,8 +1,8 @@
 <?php
 
-namespace Web\UserBundle\Controller;
+namespace User\CommonBundle\Controller;
 
-use Web\UserBundle\Controller\UserBaseController;
+use User\CommonBundle\Controller\UserBaseController;
 use Symfony\Component\HttpFoundation\Response;
 
 
@@ -14,7 +14,7 @@ class ConsoleController extends UserBaseController
 		
 		
 		
-		return $this->render('WebUserBundle:Console:index.html.twig');
+		return $this->render('UserCommonBundle:Console:index.html.twig');
 	}
     
     

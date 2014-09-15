@@ -1,8 +1,8 @@
 <?php
 
-namespace Web\UserBundle\Controller;
+namespace User\CommonBundle\Controller;
 
-use Web\UserBundle\Controller\UserBaseController;
+use User\CommonBundle\Controller\UserBaseController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
@@ -19,7 +19,7 @@ class CommonController extends UserBaseController
     	
     	
     	
-       return $this->render('WebUserBundle:Common:login.html.twig');
+       return $this->render('UserCommonBundle:Common:login.html.twig');
     }//function loginAction() end
     
 
@@ -38,7 +38,7 @@ class CommonController extends UserBaseController
     	
     	$formView = $registerForm->createView();
     		
-    	return $this->render('WebUserBundle:Common:register.html.twig',array('formView'=>$formView));
+    	return $this->render('UserCommonBundle:Common:register.html.twig',array('formView'=>$formView));
     	
     }//function registerAction() end
     
@@ -60,7 +60,7 @@ class CommonController extends UserBaseController
     
     
     
-    	return $this->render('WebUserBundle:Console:index.html.twig');
+    	return $this->render('UserCommonBundle:Console:index.html.twig');
     }
     
     

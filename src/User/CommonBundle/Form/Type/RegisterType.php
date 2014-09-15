@@ -1,6 +1,6 @@
 <?php
 
-namespace Web\UserBundle\Form\Type;
+namespace User\CommonBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -116,7 +116,7 @@ class RegisterType extends AbstractType
 	{
 		$resolver->setDefaults(array(
 				
-			'data_class' => 'Web\UserBundle\Entity\User',
+			'data_class' => 'User\CommonBundle\Entity\User',
 			'cascade_validation'=>true
 		));
 	}
