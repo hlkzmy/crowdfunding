@@ -166,6 +166,12 @@ p.p-tl{ width:100%; text-align:center; padding-top:30px;}
 
 /*修改于20140718*/
 /*header*/
+.page-header{
+	margin-top:0px;
+	height:100px;
+	overflow:hidden;
+}
+
 
 .page-header .page-logo {
 	display: block;

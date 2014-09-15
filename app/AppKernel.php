@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new Web\UserBundle\WebUserBundle(),
             new Web\ProjectBundle\WebProjectBundle(),
             new Web\PageBundle\WebPageBundle(),
+            new User\CommonBundle\UserCommonBundle(),
 		);
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
